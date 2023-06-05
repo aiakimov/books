@@ -1,5 +1,5 @@
-const Container = () => {
-  return <></>
+const Container = ({ children }: { children: React.ReactNode }) => {
+  return <>{children}</>
 }
 
 export default Container
