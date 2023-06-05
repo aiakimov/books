@@ -1,3 +1,4 @@
+import Button from '@/components/base/Button'
 import MoonIcon from '@/images/icons/moonIcon'
 import SunIcon from '@/images/icons/sunIcon'
 import useThemeStore from '@/stores/useThemeStore'
@@ -14,12 +15,9 @@ const ThemeButton = () => {
     }
   }, [isDarkTheme])
   return (
-    <button
-      className=" text-gray-900 dark:text-gray-100 p-3 rounded-xl bg-gray-100 dark:bg-gray-900"
-      onClick={() => setTheme(!isDarkTheme)}
-    >
+    <Button secondary onClick={() => setTheme(!isDarkTheme)}>
       {isDarkTheme ? <SunIcon /> : <MoonIcon />}
-    </button>
+    </Button>
   )
 }
 
